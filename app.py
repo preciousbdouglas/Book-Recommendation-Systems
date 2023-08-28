@@ -11,15 +11,15 @@ st.set_page_config(layout="centered")
 with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.title("📚Book Recommendation App")
+st.title("📚Book Recommendation Web App")
 st.markdown("#")
 st.markdown("#")
 
 
 st.sidebar.markdown(f" ## :gear: Recommendation Settings")
 st.sidebar.markdown("---")
-no_of_rec = int(st.sidebar.slider("Select Number of Book Recommendations", 1, 50, 10))
-n_cols = st.sidebar.number_input("Select Number of columns", 2, 8, 5)
+no_of_rec = int(st.sidebar.slider("Select Number of Book Recommendations", 5))
+n_cols = st.sidebar.number_input("Select Number of columns", 5)
 n_cols = int(n_cols)
 
 
@@ -106,7 +106,7 @@ if rec_btn:
     st.markdown("---")
 
     # RECOMMENDATION SIDE
-    st.subheader(f"Top {no_of_rec} Ranked Book Recommendations for user {user_id}")
+    st.subheader(f"Top {no_of_rec} Ranked Book Recommendations for user {user_id} to read")
     st.markdown("---")
 
     top_rec = recommend_books(user_id, no_of_rec)
