@@ -25,7 +25,7 @@ st.markdown("#")
 st.sidebar.markdown(f" ## :gear: Recommendation Settings")
 st.sidebar.markdown("---")
 no_of_rec = int(st.sidebar.slider("Select Number of Book Recommendations", 50))
-n_cols = st.sidebar.number_input("Columns", 5)
+n_cols = st.sidebar.number_input("Recommended Books Columns", 5)
 n_cols = int(n_cols)
 
 
@@ -112,7 +112,7 @@ if rec_btn:
     st.markdown("---")
 
     # RECOMMENDATION SIDE
-    st.subheader(f"Top {no_of_rec} Ranked Book Recommendations for user {user_id}")
+    st.subheader(f"Top {no_of_rec} Ranked Book Recommendations for user {user_id} to read")
     st.markdown("---")
 
     top_rec = recommend_books(user_id, no_of_rec)
