@@ -24,8 +24,8 @@ st.markdown("#")
 
 st.sidebar.markdown(f" ## :gear: Recommendation Settings")
 st.sidebar.markdown("---")
-no_of_rec = int(st.sidebar.slider("Select Number of Book Recommendations", 5, 10, 50))
-n_cols = st.sidebar.number_input("Recommended Books Columns", 2, 5)
+no_of_rec = int(st.sidebar.slider("Select Number of Book Recommendations", 2, 3, 5, 10, 50))
+n_cols = st.sidebar.number_input("Recommended Books Columns", 5, 10)
 n_cols = int(n_cols)
 
 
